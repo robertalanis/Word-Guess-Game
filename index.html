@@ -10,42 +10,57 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Link Style Sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Rye&display=swap" rel="stylesheet"></head>
 
 <!-- BODY -->
 <body>
     <!-- Container -->
-    <div class =  "container-fluid">
+    <div class =  "container px-2 pt-5">
         <!-- Jumbotron with Title -->
-        <div class="jumbotron">
-            <h1 class="text-center"> <strong>Botanical Guessing Game</strong></h1>
+        <div class="jumbotron pt-2">
+            <p class="title text-center"> Word Guessing Game</p>
             <hr>
+            <!-- Instructions -->
+            <p class="text-center">Press any key to get started!</p>
         </div>
-    </div>
+    
         <!-- Rows -->
         <div class = "row">
-            <!-- Left Row -->
-            <div class = "col-md-5">
-                <h4>image</h4>
-                <!-- Current Word -->
-                <h2>Current Word</h2>
-                    <div id="currentWord"></div>
-            </div>
+            
             <!-- Right Row -->
             <div class = "col-md-7">
-                <!-- Instructions -->
-                <h2>Press any key to get started!</h1>
-                    <br>
-                <!-- Wins -->   
-                <h3>Wins: </h3>
-                    <div id="totalWins"></div>
+
                 <!-- Remaining Guesses -->     
                 <h3>Number of Guesses Remaining:</h3>
-                    <div id="remainingGuesses"></div>    
+                    <div id="numGuessesRemaining"></div> 
+
                 <!-- Letters Guessed --> 
                 <h3>Letters Already Guessed:</h3>
-                    <div id="gussedLetters"></div>
+                    <div id="lettersGuesses=d"></div>
+
+                <!-- Wins -->   
+                <h3>Wins: </h3>
+                    <div id="numWins"></div>
+
+                <!-- Losses -->   
+                <h3>Losses: </h3>
+                    <div id="numLosses"></div>
+
             </div>
+
+            <!-- Left Row -->
+            <div class = "col-md-5">
+        
+                <!-- Current Word -->
+                <h2>Current Word</h2>
+                    <div id="wordAns"></div>
+
+                <!-- Gif Placeholder-->
+                <div class = "gif">
+                    <iframe id="giphy-embed" src="" frameborder="0"></iframe>
+                </div>
+
+            </div>    
         </div>
     </div>
 

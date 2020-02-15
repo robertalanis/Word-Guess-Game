@@ -1,0 +1,12 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-color: #cccccc;
+    font-family: 'Lato', sans-serif;
+   }
+
+.jumbotron {
+    background-color: blue;
+    color: whitesmoke;
+    font-family: 'Rye', cursive;
+}
+
