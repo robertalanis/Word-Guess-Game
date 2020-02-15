@@ -1,12 +1,43 @@
 body {
-    background-image: url("../images/background.jpg");
     background-color: #cccccc;
     font-family: 'Lato', sans-serif;
    }
 
 .jumbotron {
-    background-color: blue;
-    color: whitesmoke;
+    background-color: skyblue;
+    color: brown;
     font-family: 'Rye', cursive;
 }
 
+.rye {
+    font-family: 'Rye', cursive;  
+}
+
+.pt-2, .py-2 {
+    padding: 2px;
+    }
+
+.peru {
+    background-color: peru;
+    color: white;
+    text-align: center;
+}
+
+.steelblue {
+    background-color: saddlebrown;
+    text-align: center;
+}
+
+.seagreen {
+    background-color: seagreen;
+    text-align: center;
+}
+
+.tomato {
+    background-color: tomato;
+    text-align: center;
+}
+
+.currentWord {
+    letter-spacing: 3px !important;
+}

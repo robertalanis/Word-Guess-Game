@@ -1,5 +1,5 @@
 // word list
-var wordList = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY"];
+var wordList = ["AUSTIN", "BEYONCE", "DALLAS", "QUESO", "SELENA", "TACOS"];
 
 // maximum number of guesses
 var maxGuesses = 10;
@@ -36,7 +36,10 @@ function setup() {
     numGuessesRemaining = maxGuesses;
     lettersGuessed = [];
 
-    // show selected elements on the screen
+    //clears giphy-embed
+    document.getElementById("giphy-embed").src ="";
+    
+     // show selected elements on the screen
     updateScreen ();
 };
 
@@ -57,11 +60,8 @@ function checkGuess(letter) {
         // subtract numGuessesRemaining if letter not in answer  
         if (wordAns.indexOf(letter) === -1) {
             numGuessesRemaining--;
-            // if numGuessesRemaining is 3 or less then change color
-            if (numGuessesRemaining <=3) {
-                document.getElementById("numGuesses").style.color = "#CD5C52"    
-            }
         } else {
+            // if the letter is in the answer then replace the "_" with the letter
             for (var i = 0; i < wordAns.length; i++) {
                 if (letter === wordAns[i]) {
                     wordAnsArr[i] = letter;
@@ -72,25 +72,48 @@ function checkGuess(letter) {
 };
 
 
+
+// function to check if the user has won
 function isWinner() {
+    // if there are no more  "_" in wordAnsArr then add +1 to wins and set isFinsihed to true
     if (wordAnsArr.indexOf("_") === -1) {
         numWins++;
         isFinished = true;
+        // giff that will display if the user has guessed correctly
+        if(wordAns === "AUSTIN") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/4NaJURoc3ULVgGSgTS";
+        } else if (wordAns === "BEYONCE") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/idXJtVxvDDwWTDZoqd";
+        } else if (wordAns === "DALLAS") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/2sizd1h6RrDQJdU5cJ";
+        } else if (wordAns === "QUESO") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/l2QZZdG1skyLTXJcI";
+        } else if (wordAns === "SELENA") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/hl0eJ9GsoiFVu";
+        } else if (wordAns === "TACOS") {
+            document.getElementById("giphy-embed").src = "https://giphy.com/embed/3osxYrTYLiEYY0zntS";
+        } 
     }
 };
 
+// fuction to check if the user has lost
 function isLoser() {
+    //if numGuessesRemaining is 0 then add +1 to losses and set is finished to true
     if(numGuessesRemaining <= 0) {
         numLosses++;
         isFinished = true;
+        document.getElementById("giphy-embed").src = "https://giphy.com/embed/3o7WIAX4SN8MYO6kCc";
     }
 };
 
+// event listener for key pressed
 document.onkeyup = function(event) {
+    // if ifFinsihed is true then restart the game to the initial setup and set isFinsihed to false
     if (isFinished) {
         setup();
         isFinished = false;
     } else {
+        // functions are only called if user presses letters A-Z
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             checkGuess(event.key.toUpperCase());
             updateScreen();
@@ -103,4 +126,5 @@ document.onkeyup = function(event) {
 setup();
 updateScreen();
 
-console.log(ansWord);
+// way to check for answer
+console.log(wordAns);
