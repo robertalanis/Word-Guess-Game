@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- HEAD -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link Style Sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="javascript" href="assets/javascript/game.js">
-
-    <h1>Press any key to get started!</h1>
-
-    <h2>Wins: </h2>
-    <h2>Number of Guesses Remaining: </h2>
-    <h2>Letters Already Guessed:</h2>
-
-    
 </head>
+
+<!-- BODY -->
 <body>
-    
+    <!-- Container -->
+    <div class =  "container-fluid">
+        <!-- Jumbotron with Title -->
+        <div class="jumbotron">
+            <h1 class="text-center"> <strong>Botanical Guessing Game</strong></h1>
+            <hr>
+        </div>
+    </div>
+        <!-- Rows -->
+        <div class = "row">
+            <!-- Left Row -->
+            <div class = "col-md-5">
+                <h4>image</h4>
+                <!-- Current Word -->
+                <h2>Current Word</h2>
+                    <div id="currentWord"></div>
+            </div>
+            <!-- Right Row -->
+            <div class = "col-md-7">
+                <!-- Instructions -->
+                <h2>Press any key to get started!</h1>
+                    <br>
+                <!-- Wins -->   
+                <h3>Wins: </h3>
+                    <div id="totalWins"></div>
+                <!-- Remaining Guesses -->     
+                <h3>Number of Guesses Remaining:</h3>
+                    <div id="remainingGuesses"></div>    
+                <!-- Letters Guessed --> 
+                <h3>Letters Already Guessed:</h3>
+                    <div id="gussedLetters"></div>
+            </div>
+        </div>
+    </div>
 
-
+<!-- Scripts -->
+<script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
