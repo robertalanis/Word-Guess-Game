@@ -37,7 +37,7 @@ function setup() {
     lettersGuessed = [];
 
     //clears giphy-embed
-    document.getElementById("giphy-embed").src ="";
+    document.getElementById("giphy-embed").src ="https://giphy.com/embed/szmc6VgQeft0A";
     
      // show selected elements on the screen
     updateScreen ();

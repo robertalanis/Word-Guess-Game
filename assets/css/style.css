@@ -17,6 +17,10 @@ body {
     padding: 2px;
     }
 
+.row-two {
+    height: 175px;
+}
+
 .peru {
     background-color: peru;
     color: white;

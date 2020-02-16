@@ -35,7 +35,7 @@
                     <!-- First Column -- Wins -->
                     <div class = "col-6 col-sm-6 col-md-3 col-lg-3">
                         <!-- Wins -->
-                        <div class = "pt-1 p-1 mb-2 seagreen text-white rounded">
+                        <div class = "pt-3 p-1 mb-2 seagreen text-white rounded">
                             <h5>Wins: </h5>
                             <div class = "rye">
                                 <h2><p id= "numWins"></p></h2>
@@ -44,7 +44,7 @@
                     </div>
                     <!-- Second Column  -- Losses -->
                     <div class = "col-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class = "p-1 mb-2 tomato text-white rounded"> 
+                        <div class = "pt-3 p-1 mb-2 tomato text-white rounded"> 
                             <h5>Losses: </h5>
                             <div class = "rye">
                                 <h2><p id= "numLosses"></p></h2>
@@ -54,7 +54,7 @@
 
                     <!-- Third Column -- Guesses Remaining -->
                     <div class = "col-12 com-sm-12 col-md-6 col-lg-6">
-                        <div class = "p-1 mb-2 steelblue text-white rounded">
+                        <div class = "pt-3 p-1 mb-2 steelblue text-white rounded">
                             <h5>Guesses Remaining:</h5>
                             <div class = "rye">
                                 <h2><p id= "numGuessesRemaining"></p></h2>
@@ -62,54 +62,59 @@
                         </div>
                     </div>
 
-
-
                 </div>
             </div>
         </div>
 
-           
+        <!-- Second Row -->
+        <!-- Main Row -->
+        <div class = "row">
+            <div class = "col-12">
+                <!-- Nested Row -->
+                <div class = "row">
+
+                    <!-- First Column -->
+                    <div class = "col-lg-7">
+                        <div class = "row-two pt-4 p-1 mb-2 seagreen text-white rounded">
+                            <h5>Letters Already Guessed:</h5>
+                                <hr>
+                            <div class = "rye">
+                                <h1 id="lettersGuessed"></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Column -->
+                    <div class = "col-lg-5">
+                        <div class = "row-two pt-2 p-1 mb-2 seagreen text-white rounded">
+                            <!-- Gif Placeholder-->
+                            <div class = "gif">
+                                <iframe id="giphy-embed" src="" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>       
+        </div>
+
         <!-- Third Row -->
         <div class = "row">
             <!-- Second Column -->
             <div class = "col-12">
                 <!-- Letters Guessed --> 
                 <div class = "p-3 mb-2 peru rounded">
-                    <h5>Letters Already Guessed:</h5>
+                    <!-- Current Word -->
+                    <div class = "currentWord">
                         <div class = "rye">
-                            <h1 id="lettersGuessed"></h1>
+                            <h1 id="wordAns"></h1>
                         </div>
+                            <hr>
+                        <h6>Press any key to get started!</h6> 
+                    </div>
                 </div>  
             </div>
-        </div>       
+        </div>   
 
-        <!-- Fourth Row -->
-        <div class = "row">
-
-            <!-- First Column -->
-            <div class = "col-7 p-3 mb-2 peru rounded">
-                <!-- Current Word -->
-                <div class = "currentWord">
-                    <h1 id="wordAns"></h1>
-                    <h6>Press any key to get started!</h6> 
-                </div>
-            </div>
-
-            <!-- Second Column -->
-            <div class = "col-5 p-3 mb-2 peru rounded">
-                <!-- Gif Placeholder-->
-                <div class = "gif">
-                    <iframe id="giphy-embed" src="" frameborder="0"></iframe>
-                </div> 
-            </div>
-        </div>
-
-
-        
-
-        
-
-        
     </div>
 
 <!-- Scripts -->
